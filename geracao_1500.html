@@ -1,0 +1,43 @@
+<meta charset="utf-8">
+
+<script>
+
+	function pulaLinha(){
+
+		document.write("<br>")
+
+	}
+
+	function gerar(){
+
+		difTempo = new Date().getFullYear() - 1500;
+		geracao(difTempo);
+
+	}
+
+	function geracao(difTempo){
+
+		geracoes = difTempo / 28;
+		mostrar(geracoes, difTempo);
+
+	}
+
+	function mostrar(geracoes, difTempo){
+
+		document.write("<h1>Desde de 1500 se passaram " + difTempo + " anos.</h1>");
+		pulaLinha();
+		document.write("<h1>Tivemos a cada 28 anos até hoje ", + Math.round(geracoes) + " gerações.</h1>");
+
+	}
+
+	gerar();
+
+	/*data = new Date().getFullYear();
+
+	document.write(data);
+
+	dat2 = new Date();
+
+	document.write("<br>" + dat2.getFullYear(''))*/
+
+</script>	

@@ -1,0 +1,59 @@
+<meta charset="UTF-8">
+
+<input/> <!-- uma caixa de informação que parace -->
+
+<button>Compare com o meu segredo</button> <!-- um botão que aparce -->
+
+<script>
+
+    
+    var input = document.querySelector("input"); // acessar o input do html.
+    input.focus();
+
+    function sorteia(){
+
+        return Math.round(Math.random() * 10);
+    }   
+
+    function forsorteia(valor){
+
+        var segredo = [];
+        for (var cont = 0; cont < valor; cont++){
+
+            segredo.push(sorteia);
+        }
+
+        console.log(segredo)
+        return segredo;
+
+    }
+
+
+    function verifica() {
+
+        achou = true;
+        forsorteia(5);
+        console.log(forsorteia);
+        for (var posicao = 0; posicao < forsorteia.length; posicao++){
+
+            if (input.value == forsorteia[posicao]){
+
+                alert("Você acertou");
+                achou = false;
+                break;
+            }
+        }
+
+        if (achou == true){
+
+            alert("ERROU!!!!");
+        }   
+
+        input.value = "";
+        input.focus();
+    }
+
+    var button = document.querySelector("button");
+    button.onclick = verifica;
+
+</script>

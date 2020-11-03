@@ -1,0 +1,30 @@
+<meta charset="UTF-8">
+
+<script>
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    var cont = 1;
+
+    while (true){
+
+        if (cont <= 10){
+
+            mostra(cont);
+        }
+
+        if (cont == 5){
+
+            break;
+
+        }
+        cont++;
+    }
+
+</script>
