@@ -1,0 +1,49 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha() {
+
+        document.write("<br>");
+        document.write("<br>");
+
+	}
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+	}
+
+    function sorteia() {
+
+        return Math.round(Math.random() * 100);
+
+    }
+
+    var computador = sorteia();
+
+    console.log(computador);
+
+    var jogador = parseInt(prompt("Digite um número: "));
+
+    if (jogador == computador){
+
+        mostra("Você acertou!!!");
+
+    } else {
+
+        if (jogador > computador){
+
+            mostra("O seu número, " + jogador + ", é maior que do computador que é " + computador);
+
+        } else {
+
+            mostra("O seu número, " + jogador + ", é menor que do computador que é " + computador);
+
+        }
+
+
+    }
+
+</script>

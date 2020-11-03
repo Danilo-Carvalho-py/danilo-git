@@ -1,0 +1,27 @@
+<meta charset="UTF-8">
+
+<script>
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    var totalIdades = parseInt(prompt("Quantos familiares: "));
+    var soma = 0;
+    var cont = 1;
+
+    while (cont <= totalIdades){
+
+        idade = parseInt(prompt("Qual a idade: "));
+        soma += idade;
+        cont++
+    }
+
+    mostra("A soma das idades são: " + soma);
+    mostra("A média das idades são: " + soma/totalIdades);
+
+</script>
