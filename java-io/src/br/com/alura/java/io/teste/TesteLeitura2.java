@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class TesteLeitura2 {
 	public static void main(String[] args) throws Exception {
 		
-		Scanner scanner = new Scanner(new File("contas.csv"), "UTF-8");// uTF-8 para corrgir a palavras com problermas de caractres especiais
+		Scanner scanner = new Scanner(new File("contas.csv"));		
 		while (scanner.hasNextLine()) {
 			String linha = scanner.nextLine();
 //			System.out.println(linha);
